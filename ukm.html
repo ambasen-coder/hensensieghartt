@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haruna Matata | Toko Kue Pie</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      color: #3a2f2a;
+      line-height: 1.6;
+      background: #fffaf7;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      background: linear-gradient(rgba(40, 25, 20, 0.45), rgba(40, 25, 20, 0.55)),
+                  url('https://cdn.phototourl.com/member/2026-10-03-f1f0a29d-8660-4716-9ab2-29d61a93af63.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 120px 20px 100px;
+    }
+    .hero h1 {
+      font-size: 3.2rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 520px;
+      margin: 0 auto 35px;
+      opacity: 0.95;
+    }
+    .btn {
+      display: inline-block;
+      background: #c17f59;
+      color: white;
+      padding: 15px 36px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 20px rgba(193, 127, 89, 0.35);
+    }
+    .btn:hover {
+      background: #a66b48;
+      transform: translateY(-3px);
+    }
+
+    /* ===== SECTION UMUM ===== */
+    section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 20px;
+    }
+    h2 {
+      text-align: center;
+      font-size: 2.1rem;
+      color: #3a2f2a;
+      margin-bottom: 12px;
+    }
+    .subtitle {
+      text-align: center;
+      color: #7a6a60;
+      margin-bottom: 50px;
+      font-size: 1.1rem;
+    }
+
+    /* ===== KEUNGGULAN ===== */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 28px;
+    }
+    .feature {
+      background: white;
+      padding: 32px 24px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+    }
+    .feature .icon {
+      font-size: 2.4rem;
+      margin-bottom: 14px;
+    }
+    .feature h3 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+      color: #c17f59;
+    }
+
+    /* ===== PRODUK ===== */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+    .product {
+      background: white;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+      transition: transform 0.3s;
+    }
+    .product:hover { transform: translateY(-6px); }
+    .product img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    .product-info {
+      padding: 22px;
+    }
+    .product-info h3 {
+      font-size: 1.25rem;
+      margin-bottom: 6px;
+    }
+    .product-info p {
+      color: #7a6a60;
+      font-size: 0.95rem;
+      margin-bottom: 14px;
+    }
+    .price {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #c17f59;
+    }
+
+    /* ===== TESTIMONI ===== */
+    .testimonials {
+      background: #f8f1eb;
+      padding: 80px 20px;
+    }
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .testi {
+      background: white;
+      padding: 28px;
+      border-radius: 16px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    }
+    .testi p {
+      font-style: italic;
+      margin-bottom: 16px;
+      color: #555;
+    }
+    .testi strong {
+      color: #c17f59;
+    }
+
+    /* ===== CTA ===== */
+    .cta {
+      background: linear-gradient(135deg, #3a2f2a, #5c4338);
+      color: white;
+      text-align: center;
+      padding: 90px 20px;
+    }
+    .cta h2 {
+      color: white;
+      margin-bottom: 12px;
+    }
+    .cta p {
+      opacity: 0.9;
+      margin-bottom: 30px;
+      font-size: 1.15rem;
+    }
+    .cta .btn {
+      background: #c17f59;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #2a211c;
+      color: #b8a99e;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.95rem;
+    }
+    footer a {
+      color: #c17f59;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Haruna Matata</h1>
+    <p>Kue mousse lembut, kaya rasa, dibuat fresh setiap hari dengan bahan pilihan terbaik.</p>
+    <a href="#order" class="btn">Pesan Sekarang</a>
+  </section>
+
+  <!-- KEUNGGULAN -->
+  <section>
+    <h2>What's Special About Haruna Matata?</h2>
+    <p class="subtitle">Karena di Haruna Matata, every cake is a little piece of happiness! 🎀 Kuenya lucu-lucu, gemas, dan pastinya bikin jatuh hati!</p>
+    <div class="features">
+      <div class="feature">
+        <div class="icon"></div>
+        <h3>Quality & Hygiene</h3>
+        <p>Menggunakan bahan pilihan dengan proses pembuatan yang bersih dan terjaga untuk kualitas terbaik.</p>
+      </div>
+      <div class="feature">
+        <div class="icon"></div>
+        <h3>Cute & Pretty Cakes</h3>
+        <p>Tampilan kue yang cantik, lucu, dan menggemaskan. Bikin jatuh cinta sebelum mencicipinya!</p>
+      </div>
+      <div class="feature">
+        <div class="icon"></div>
+        <h3>A Personal Touch</h3>
+        <p>Tambahkan pesan manis atau pilih kemasan spesial untuk membuat setiap momen lebih berkesan.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUK UNGGULAN -->
+  <section>
+    <h2>Most Loved Desserts</h2>
+    <p class="subtitle">Pilihan dessert favorit dengan tampilan cantik dan rasa yang bikin nagih! 🍰💗</p>
+    <div class="products">
+      <div class="product">
+        <img src="https://cdn.phototourl.com/member/2026-10-03-2f44f153-9881-4892-b7fc-454b8136e133.jpg" alt="Matcha Miss U">
+        <div class="product-info">
+          <h3>Matcha Miss U</h3>
+          <p>Matcha Tiramisu Cake dengan lapisan sponge cake lembut, krim creamy, dan taburan matcha yang khas. Perpaduan rasa manis dan sedikit pahit yang lezat di setiap gigitan..</p>
+          <div class="price">Rp 28.000</div>
+        </div>
+      </div>
+      <div class="product">
+        <img src="https://cdn.phototourl.com/member/2026-10-03-f01927df-c881-4fbe-814b-0927f77c55e2.jpg" alt="Chocomorii Miss U">
+        <div class="product-info">
+          <h3>Chocomorii Miss U</h3>
+          <p>Classic Tiramisu Cake, kue dengan cita rasa kopi yang khas, berpadu dengan krim lembut dan taburan cokelat premium. Setiap lapisannya menghadirkan sensasi manis dan aroma kopi yang menggoda.</p>
+          <div class="price">Rp 20.000</div>
+        </div>
+      </div>
+      <div class="product">
+        <img src="https://cdn.phototourl.com/member/2026-10-03-b7b467e5-3870-4f64-b518-4e4d6c89d223.jpg" alt="Milky Way Cinnamon Roll">
+        <div class="product-info">
+          <h3>Milky Way Cinnamon Roll</h3>
+          <p>Roti lembut dengan isian cinnamon yang manis dan wangi, lalu dilapisi glaze creamy di atasnya. teksturnya soft, rasanya manis dengan sedikit aroma cinnamon yang khas.</p>
+          <div class="price">Rp 18.000</div>
+        </div>
+      </div>
+    <div class="product">
+        <img src="https://cdn.phototourl.com/member/2026-10-03-5660cf92-e4d8-4924-a681-3595d1b3bc7f.jpg" alt="Tiramissu">
+        <div class="product-info">
+          <h3>Stramissu</h3>
+          <p>Perpaduan pastry renyah, krim lembut, dan potongan stroberi segar dengan taburan gula halus yang menciptakan rasa manis dan segar di setiap lapisan.</p>
+          <div class="price">Rp 25.000</div>
+        </div>
+    </div>
+      <div class="product">
+        <img src="https://cdn.phototourl.com/member/2026-10-03-02c55230-a695-4d24-86dc-309bac1215bb.jpg" alt="Croissant Cake">
+        <div class="product-info">
+          <h3>Berry-Croiss</h3>
+          <p>Croissant yang renyah dan buttery, diisi whipped cream yang lembut dan stroberi segar. perpaduan manis, creamy, dan sedikit asem dari stroberinya bikin rasanya balance dan nggak eneg.</p>
+          <div class="price">Rp 25.000</div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONI -->
+  <div class="testimonials">
+    <h2>Apa Kata Mereka?</h2>
+    <p class="subtitle" style="margin-bottom: 40px;">Ribuan pelanggan sudah merasakan kelembutannya</p>
+    <div class="testi-grid">
+      <div class="testi">
+        <p>"Pretty, fresh, and yummy! 🍓🍰 Pastry-nya renyah, cream-nya lembut, ditambah stroberi segar yang bikin rasanya makin refreshing. So cute and so delicious! buatt post story inii rekomendasi bgtttt plisss."</p>
+        <strong>— Sisca, Sungai Raya</strong>
+      </div>
+      <div class="testi">
+        <p>"Dari matcha yang creamy, tiramisu yang menggoda, sampai pastry stroberi yang gemas banget! Semuanya punya tampilan cantik bgtt jujurr pas langsung kayaa haruss akk fotoo bgttt. pliss i love 🍰🍓💚."</p>
+        <strong>— Jena, Pontianak</strong>
+      </div>
+      <div class="testi">
+        <p>"seenak itu pliss apalagi yang coklat itu uenakkk polll bikin nagih, dengan harga 22k sii enakk bgtt buatt makanan story ig"</p>
+        <strong>— Kevin, Singkawang</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <section class="cta" id="order">
+    <h2>Ready for Something Sweet? 🍓</h2>
+    <p>Yuk, pesan dessert favoritmu sekarang dan nikmati manisnya setiap gigitan!</p>
+    <a href="https://wa.me/6285169546702?text=Hiii,%sweetie!%Welcome%to%Haruna%Matata!%Katanya%yang%manis%bikin%bahagia,%tapi%kalau%dessert%kami%yang%bikin%kamu%jatuh%hati,%gimana?%Mau%checkout%dessert%gemas%yang%mana%hari%ini?" class="btn">
+      Chat WhatsApp
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Haruna Matata · Sweet moments, made with love. ♡</p>
+    <p style="margin-top: 8px;">
+      WhatsApp: 0851-6954-6702
+    </p>
+  </footer>
+
+</body>
+</html>
